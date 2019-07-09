@@ -12,9 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func openStories(_ sender: Any) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: StoriesViewController.self)) {
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
+    }
+    
 }
 
