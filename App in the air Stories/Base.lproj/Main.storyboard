@@ -56,6 +56,7 @@
                                 </subviews>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="mFs-fB-dDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="L0u-P0-KcQ" secondAttribute="leading" constant="20" symbolic="YES" id="PC3-f1-m1K"/>
                                     <constraint firstItem="mFs-fB-dDp" firstAttribute="trailing" secondItem="L0u-P0-KcQ" secondAttribute="trailingMargin" id="dmu-Oa-TsE"/>
                                     <constraint firstItem="mFs-fB-dDp" firstAttribute="top" secondItem="L0u-P0-KcQ" secondAttribute="topMargin" id="pdX-Uf-OJd"/>
                                 </constraints>
@@ -78,13 +79,65 @@
             </objects>
             <point key="canvasLocation" x="966.66666666666674" y="137.94642857142856"/>
         </scene>
+        <!--Content View Controller-->
+        <scene sceneID="0mG-VB-5xk">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1pH-WW-uL3" customClass="ContentViewController" customModule="App_in_the_air_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vEN-11-P44">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDP-XD-eQ0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XIP-9a-KgJ">
+                                <rect key="frame" x="16" y="480" width="382" height="382"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8o-l7-NJy">
+                                        <rect key="frame" x="0.0" y="0.0" width="200.5" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDJ-f4-E7e">
+                                        <rect key="frame" x="0.0" y="66.5" width="382" height="315.5"/>
+                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ocz-TK-8E1" firstAttribute="bottom" secondItem="XIP-9a-KgJ" secondAttribute="bottom" id="7Uf-tO-ncB"/>
+                            <constraint firstAttribute="bottom" secondItem="fDP-XD-eQ0" secondAttribute="bottom" id="BjK-ZD-2h1"/>
+                            <constraint firstItem="fDP-XD-eQ0" firstAttribute="leading" secondItem="Ocz-TK-8E1" secondAttribute="leading" id="aIV-od-ZxX"/>
+                            <constraint firstAttribute="trailing" secondItem="XIP-9a-KgJ" secondAttribute="trailing" constant="16" id="aZk-lB-ewa"/>
+                            <constraint firstItem="fDP-XD-eQ0" firstAttribute="trailing" secondItem="Ocz-TK-8E1" secondAttribute="trailing" id="fW9-Fa-hja"/>
+                            <constraint firstItem="fDP-XD-eQ0" firstAttribute="top" secondItem="vEN-11-P44" secondAttribute="top" id="j03-Ph-Gdd"/>
+                            <constraint firstItem="XIP-9a-KgJ" firstAttribute="leading" secondItem="Ocz-TK-8E1" secondAttribute="leading" constant="16" id="twX-9V-iy7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ocz-TK-8E1"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fDP-XD-eQ0" id="X4p-gZ-k0x"/>
+                        <outlet property="textLabel" destination="fDJ-f4-E7e" id="TCg-X1-Cjx"/>
+                        <outlet property="titleLabel" destination="G8o-l7-NJy" id="vni-vm-uCe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IwI-CA-EWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804.3478260869567" y="137.94642857142856"/>
+        </scene>
         <!--Page View Controller-->
         <scene sceneID="UKu-p0-qaw">
             <objects>
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="m3Z-Kl-4FN" customClass="PageViewController" customModule="App_in_the_air_Stories" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f95-qr-gV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="138"/>
+            <point key="canvasLocation" x="2642" y="138"/>
         </scene>
     </scenes>
 </document>
