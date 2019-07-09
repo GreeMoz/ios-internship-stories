@@ -14,6 +14,16 @@ class StoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupGestures()
+    }
+    
+    func setupGestures() {
+        let closeGesture = UISwipeGestureRecognizer(target: self, action: #selector(close))
+        closeGesture.direction = .down
+        view.addGestureRecognizer(closeGesture)
     }
 
+    @IBAction @objc func close(_ sender: Any) {
+        dismiss(animated: true)
+    }
 }

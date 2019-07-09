@@ -45,7 +45,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0u-P0-KcQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-fB-dDp">
+                                        <rect key="frame" x="367" y="52" width="39" height="30"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="close:" destination="e0G-IZ-SGO" eventType="touchUpInside" id="Oby-kq-gbh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="mFs-fB-dDp" firstAttribute="trailing" secondItem="L0u-P0-KcQ" secondAttribute="trailingMargin" id="dmu-Oa-TsE"/>
+                                    <constraint firstItem="mFs-fB-dDp" firstAttribute="top" secondItem="L0u-P0-KcQ" secondAttribute="topMargin" id="pdX-Uf-OJd"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
