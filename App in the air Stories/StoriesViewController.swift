@@ -158,4 +158,12 @@ extension StoriesViewController: UIPageViewControllerDelegate {
             currentIndex = newIndex
         }
     }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if !completed {
+            if let newIndex = (previousViewControllers.first as? ContentViewController)?.index {
+                currentIndex = newIndex
+            }
+        }
+    }
 }
