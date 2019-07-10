@@ -23,6 +23,7 @@ class StoriesViewController: UIViewController {
             pageControl.currentIndex = currentIndex + 1
         }
     }
+    var interactor: Interactor?
     
     var pageViewController: UIPageViewController?
     @IBOutlet weak var pageControl: PageControlView!
@@ -92,12 +93,43 @@ class StoriesViewController: UIViewController {
     }
     
     func setupGestures() {
-        let closeGesture = UISwipeGestureRecognizer(target: self, action: #selector(close))
-        closeGesture.direction = .down
-        view.addGestureRecognizer(closeGesture)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
         view.addGestureRecognizer(tapGesture)
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        view.addGestureRecognizer(panGesture)
+    }
+    
+    @objc func handlePan(_ sender: UIPanGestureRecognizer) {
+        let percentThreshold: CGFloat = 0.3
+        
+        let translation = sender.translation(in: view)
+        let verticalMovement = translation.y / view.bounds.height
+        let downwardMovement = fmaxf(Float(verticalMovement), 0.0)
+        let downwardMovementPercent = fminf(downwardMovement, 1.0)
+        let progress = CGFloat(downwardMovementPercent)
+        
+        guard let interactor = interactor else { return }
+        
+        switch sender.state {
+        case .began:
+            interactor.hasStarted = true
+            dismiss(animated: true, completion: nil)
+        case .changed:
+            interactor.shouldFinish = progress > percentThreshold
+            interactor.update(progress)
+        case .cancelled:
+            interactor.hasStarted = false
+            interactor.cancel()
+        case .ended:
+            interactor.hasStarted = false
+            interactor.shouldFinish
+                ? interactor.finish()
+                : interactor.cancel()
+        default:
+            break
+        }
     }
 
     @IBAction @objc func close(_ sender: Any) {
