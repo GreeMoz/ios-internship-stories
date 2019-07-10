@@ -12,6 +12,7 @@ struct StoryWindow {
     var image: UIImage?
     var title: String?
     var text: String?
+    var textColor: UIColor = .white
 }
 
 class StoriesViewController: UIViewController {
@@ -60,6 +61,7 @@ class StoriesViewController: UIViewController {
             vc.displayImage = storyWindow.image
             vc.displayTitle = storyWindow.title
             vc.displayText = storyWindow.text
+            vc.textColor = storyWindow.textColor
             return vc
         } else {
             return nil

@@ -17,6 +17,7 @@ class ContentViewController: UIViewController {
     var displayImage: UIImage?
     var displayTitle: String?
     var displayText: String?
+    var textColor: UIColor?
     var index: Int?
     
     override func viewDidLoad() {
@@ -29,6 +30,8 @@ class ContentViewController: UIViewController {
         imageView.image = displayImage
         titleLabel.text = displayTitle
         textLabel.text = displayText
+        textLabel.textColor = textColor
+        titleLabel.textColor = textColor
     }
 
 }

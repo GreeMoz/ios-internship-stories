@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: StoriesViewController.self)) as? StoriesViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.windows = [
-                StoryWindow(image: UIImage(named: "four"), title: "Test title", text: "wow"),
+                StoryWindow(image: UIImage(named: "four"), title: "Test title", text: "wow", textColor: .red),
                 StoryWindow(image: UIImage(named: "one"), text: "wow"),
                 StoryWindow(image: UIImage(named: "three"), title: "Test title"),
                 StoryWindow(image: UIImage(named: "two"))
