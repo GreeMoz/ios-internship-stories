@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1E8D2C22D615EE0010735D /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1E8D2B22D615EE0010735D /* PageControlView.swift */; };
 		ACF0A46F22D49EE0009598E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A46E22D49EE0009598E4 /* AppDelegate.swift */; };
 		ACF0A47122D49EE0009598E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A47022D49EE0009598E4 /* SceneDelegate.swift */; };
 		ACF0A47322D49EE0009598E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A47222D49EE0009598E4 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC1E8D2B22D615EE0010735D /* PageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
 		ACF0A46B22D49EE0009598E4 /* App in the air Stories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App in the air Stories.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF0A46E22D49EE0009598E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF0A47022D49EE0009598E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				ACF0A48222D49F95009598E4 /* StoriesViewController.swift */,
 				ACF0A48422D49FAA009598E4 /* PageViewController.swift */,
 				ACF0A48622D4A756009598E4 /* ContentViewController.swift */,
+				AC1E8D2B22D615EE0010735D /* PageControlView.swift */,
 				ACF0A47722D49EE2009598E4 /* Assets.xcassets */,
 				ACF0A47922D49EE2009598E4 /* LaunchScreen.storyboard */,
 				ACF0A47C22D49EE2009598E4 /* Info.plist */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1E8D2C22D615EE0010735D /* PageControlView.swift in Sources */,
 				ACF0A47322D49EE0009598E4 /* ViewController.swift in Sources */,
 				ACF0A48522D49FAA009598E4 /* PageViewController.swift in Sources */,
 				ACF0A46F22D49EE0009598E4 /* AppDelegate.swift in Sources */,

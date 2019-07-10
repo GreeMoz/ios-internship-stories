@@ -18,15 +18,27 @@ struct StoryWindow {
 
 class StoriesViewController: UIViewController {
     var windows: [StoryWindow] = []
-    var currentIndex = 0
+    var currentIndex = 0 {
+        didSet {
+            pageControl.currentIndex = currentIndex + 1
+        }
+    }
+    
     var pageViewController: UIPageViewController?
-
+    @IBOutlet weak var pageControl: PageControlView!
+    
     @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupPageControl()
         setupGestures()
         setupPageViewController()
+    }
+    
+    func setupPageControl() {
+        pageControl.currentIndex = currentIndex + 1
+        pageControl.numberOfPages = windows.count
     }
     
     func setupPageViewController() {

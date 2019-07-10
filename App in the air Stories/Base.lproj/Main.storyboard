@@ -47,23 +47,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-fB-dDp">
-                                <rect key="frame" x="376" y="44" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Zpb-kk-iIU"/>
-                                    <constraint firstAttribute="width" constant="30" id="eRU-Sr-bzd"/>
-                                </constraints>
-                                <state key="normal" image="close"/>
-                                <connections>
-                                    <action selector="close:" destination="e0G-IZ-SGO" eventType="touchUpInside" id="Oby-kq-gbh"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rOQ-Mu-tzv">
+                                <rect key="frame" x="8" y="52" width="398" height="30"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uI-NQ-Vo2" customClass="PageControlView" customModule="App_in_the_air_Stories" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="10"/>
+                                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="fkh-ZC-ruZ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-fB-dDp">
+                                        <rect key="frame" x="368" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Zpb-kk-iIU"/>
+                                            <constraint firstAttribute="width" constant="30" id="eRU-Sr-bzd"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="close:" destination="e0G-IZ-SGO" eventType="touchUpInside" id="Oby-kq-gbh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mFs-fB-dDp" firstAttribute="top" secondItem="Nlo-Z8-YkB" secondAttribute="top" id="FPH-sp-F6o"/>
-                            <constraint firstItem="Nlo-Z8-YkB" firstAttribute="trailing" secondItem="mFs-fB-dDp" secondAttribute="trailing" constant="8" id="SuR-2Q-XxS"/>
-                            <constraint firstItem="mFs-fB-dDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nlo-Z8-YkB" secondAttribute="leading" symbolic="YES" id="Uji-yz-Q50"/>
+                            <constraint firstAttribute="trailing" secondItem="rOQ-Mu-tzv" secondAttribute="trailing" constant="8" id="Ev8-tj-o7j"/>
+                            <constraint firstItem="rOQ-Mu-tzv" firstAttribute="top" secondItem="Nlo-Z8-YkB" secondAttribute="top" constant="8" id="Fb0-nA-IC7"/>
+                            <constraint firstItem="rOQ-Mu-tzv" firstAttribute="leading" secondItem="Nlo-Z8-YkB" secondAttribute="leading" constant="8" id="Zum-WX-2J0"/>
                             <constraint firstItem="L0u-P0-KcQ" firstAttribute="top" secondItem="5yj-fj-YJf" secondAttribute="top" id="bTW-vA-WWL"/>
                             <constraint firstItem="L0u-P0-KcQ" firstAttribute="leading" secondItem="Nlo-Z8-YkB" secondAttribute="leading" id="mob-CV-WrQ"/>
                             <constraint firstAttribute="bottom" secondItem="L0u-P0-KcQ" secondAttribute="bottom" id="rYN-MD-mgJ"/>
@@ -73,6 +85,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="L0u-P0-KcQ" id="ejI-O3-UjH"/>
+                        <outlet property="pageControl" destination="8uI-NQ-Vo2" id="wxn-j5-PGo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fS-fk-kf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
