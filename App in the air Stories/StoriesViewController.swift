@@ -13,6 +13,7 @@ struct StoryWindow {
     var title: String?
     var text: String?
     var textColor: UIColor = .white
+    var backgroundColor: UIColor = .clear
 }
 
 class StoriesViewController: UIViewController {
@@ -62,6 +63,7 @@ class StoriesViewController: UIViewController {
             vc.displayTitle = storyWindow.title
             vc.displayText = storyWindow.text
             vc.textColor = storyWindow.textColor
+            vc.backgroundColor = storyWindow.backgroundColor
             return vc
         } else {
             return nil

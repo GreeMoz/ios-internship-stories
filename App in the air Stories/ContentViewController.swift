@@ -13,11 +13,13 @@ class ContentViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var backgroundView: UIView!
     
     var displayImage: UIImage?
     var displayTitle: String?
     var displayText: String?
     var textColor: UIColor?
+    var backgroundColor: UIColor?
     var index: Int?
     
     override func viewDidLoad() {
@@ -32,6 +34,9 @@ class ContentViewController: UIViewController {
         textLabel.text = displayText
         textLabel.textColor = textColor
         titleLabel.textColor = textColor
+        backgroundView.backgroundColor = backgroundColor
+        
+        backgroundView.layer.cornerRadius = 5
     }
 
 }

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
             vc.windows = [
                 StoryWindow(image: UIImage(named: "four"), title: "Test title", text: "wow", textColor: .red),
                 StoryWindow(image: UIImage(named: "one"), text: "wow"),
-                StoryWindow(image: UIImage(named: "three"), title: "Test title"),
+                StoryWindow(image: UIImage(named: "three"), title: "Test title", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", textColor: .black, backgroundColor: .white),
                 StoryWindow(image: UIImage(named: "two"))
             ]
             present(vc, animated: true)
