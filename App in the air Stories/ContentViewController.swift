@@ -17,6 +17,7 @@ class ContentViewController: UIViewController {
     var displayImage: UIImage?
     var displayTitle: String?
     var displayText: String?
+    var index: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()

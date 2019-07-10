@@ -45,25 +45,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0u-P0-KcQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-fB-dDp">
-                                        <rect key="frame" x="367" y="52" width="39" height="30"/>
-                                        <state key="normal" title="Close"/>
-                                        <connections>
-                                            <action selector="close:" destination="e0G-IZ-SGO" eventType="touchUpInside" id="Oby-kq-gbh"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="mFs-fB-dDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="L0u-P0-KcQ" secondAttribute="leading" constant="20" symbolic="YES" id="PC3-f1-m1K"/>
-                                    <constraint firstItem="mFs-fB-dDp" firstAttribute="trailing" secondItem="L0u-P0-KcQ" secondAttribute="trailingMargin" id="dmu-Oa-TsE"/>
-                                    <constraint firstItem="mFs-fB-dDp" firstAttribute="top" secondItem="L0u-P0-KcQ" secondAttribute="topMargin" id="pdX-Uf-OJd"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFs-fB-dDp">
+                                <rect key="frame" x="367" y="44" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="e0G-IZ-SGO" eventType="touchUpInside" id="Oby-kq-gbh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="mFs-fB-dDp" firstAttribute="top" secondItem="Nlo-Z8-YkB" secondAttribute="top" id="FPH-sp-F6o"/>
+                            <constraint firstItem="Nlo-Z8-YkB" firstAttribute="trailing" secondItem="mFs-fB-dDp" secondAttribute="trailing" constant="8" id="SuR-2Q-XxS"/>
+                            <constraint firstItem="mFs-fB-dDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nlo-Z8-YkB" secondAttribute="leading" symbolic="YES" id="Uji-yz-Q50"/>
                             <constraint firstItem="L0u-P0-KcQ" firstAttribute="top" secondItem="5yj-fj-YJf" secondAttribute="top" id="bTW-vA-WWL"/>
                             <constraint firstItem="L0u-P0-KcQ" firstAttribute="leading" secondItem="Nlo-Z8-YkB" secondAttribute="leading" id="mob-CV-WrQ"/>
                             <constraint firstAttribute="bottom" secondItem="L0u-P0-KcQ" secondAttribute="bottom" id="rYN-MD-mgJ"/>
@@ -134,7 +130,7 @@
         <!--Page View Controller-->
         <scene sceneID="UKu-p0-qaw">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="m3Z-Kl-4FN" customClass="PageViewController" customModule="App_in_the_air_Stories" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="m3Z-Kl-4FN" customClass="PageViewController" customModule="App_in_the_air_Stories" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f95-qr-gV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2642" y="138"/>
