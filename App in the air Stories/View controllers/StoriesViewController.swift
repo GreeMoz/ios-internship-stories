@@ -71,7 +71,7 @@ class StoriesViewController: UIViewController {
     }
     
     private func generateControllerFor(storyWindow: StoryWindow) -> UIViewController? {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentViewController.self)) as? ContentViewController {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentTextDownViewController.self)) as? ContentTextDownViewController {
             vc.displayImage = storyWindow.image
             vc.displayTitle = storyWindow.title
             vc.displayText = storyWindow.text
@@ -87,7 +87,7 @@ class StoriesViewController: UIViewController {
         guard index >= 0 && index < windows.count else { return nil }
         
         let vc = generateControllerFor(storyWindow: windows[index])
-        (vc as? ContentViewController)?.index = index
+        (vc as? ContentTextDownViewController)?.index = index
         
         return vc
     }
@@ -169,14 +169,14 @@ class StoriesViewController: UIViewController {
 
 extension StoriesViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if let viewController = viewController as? ContentViewController, let index = viewController.index {
+        if let viewController = viewController as? ContentTextDownViewController, let index = viewController.index {
             return viewControllerFor(index: index - 1)
         }
         return nil
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if let viewController = viewController as? ContentViewController, let index = viewController.index {
+        if let viewController = viewController as? ContentTextDownViewController, let index = viewController.index {
             return viewControllerFor(index: index + 1)
         }
         return nil
@@ -186,14 +186,14 @@ extension StoriesViewController: UIPageViewControllerDataSource {
 
 extension StoriesViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        if let newIndex = (pendingViewControllers.first as? ContentViewController)?.index {
+        if let newIndex = (pendingViewControllers.first as? ContentTextDownViewController)?.index {
             currentIndex = newIndex
         }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if !completed {
-            if let newIndex = (previousViewControllers.first as? ContentViewController)?.index {
+            if let newIndex = (previousViewControllers.first as? ContentTextDownViewController)?.index {
                 currentIndex = newIndex
             }
         }

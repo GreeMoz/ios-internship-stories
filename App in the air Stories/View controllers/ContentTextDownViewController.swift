@@ -1,5 +1,5 @@
 //
-//  ContentViewController.swift
+//  ContentTextDownViewController.swift
 //  App in the air Stories
 //
 //  Created by Oleg Kornienko on 09.07.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContentViewController: UIViewController {
+class ContentTextDownViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

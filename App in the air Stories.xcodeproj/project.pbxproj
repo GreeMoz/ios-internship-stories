@@ -18,7 +18,7 @@
 		ACF0A47B22D49EE2009598E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF0A47922D49EE2009598E4 /* LaunchScreen.storyboard */; };
 		ACF0A48322D49F95009598E4 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A48222D49F95009598E4 /* StoriesViewController.swift */; };
 		ACF0A48522D49FAA009598E4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A48422D49FAA009598E4 /* PageViewController.swift */; };
-		ACF0A48722D4A757009598E4 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A48622D4A756009598E4 /* ContentViewController.swift */; };
+		ACF0A48722D4A757009598E4 /* ContentTextDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF0A48622D4A756009598E4 /* ContentTextDownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		ACF0A47C22D49EE2009598E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACF0A48222D49F95009598E4 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		ACF0A48422D49FAA009598E4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		ACF0A48622D4A756009598E4 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		ACF0A48622D4A756009598E4 /* ContentTextDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTextDownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				ACF0A47222D49EE0009598E4 /* ViewController.swift */,
 				ACF0A48222D49F95009598E4 /* StoriesViewController.swift */,
 				ACF0A48422D49FAA009598E4 /* PageViewController.swift */,
-				ACF0A48622D4A756009598E4 /* ContentViewController.swift */,
+				ACF0A48622D4A756009598E4 /* ContentTextDownViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 				ACF0A48522D49FAA009598E4 /* PageViewController.swift in Sources */,
 				ACF0A46F22D49EE0009598E4 /* AppDelegate.swift in Sources */,
 				ACF0A48322D49F95009598E4 /* StoriesViewController.swift in Sources */,
-				ACF0A48722D4A757009598E4 /* ContentViewController.swift in Sources */,
+				ACF0A48722D4A757009598E4 /* ContentTextDownViewController.swift in Sources */,
 				ACE1E4B522D65C74008AE9E1 /* Interactor.swift in Sources */,
 				ACE1E4B722D65C80008AE9E1 /* DismissAnimator.swift in Sources */,
 				ACF0A47122D49EE0009598E4 /* SceneDelegate.swift in Sources */,
