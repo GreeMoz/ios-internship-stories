@@ -23,7 +23,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.13642284269999999" green="0.15563029049999999" blue="0.217861414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7Am-Hp-ANd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VI3-rd-23f"/>
                             <constraint firstItem="7Am-Hp-ANd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zPf-Jq-XKM"/>
@@ -45,7 +45,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L0u-P0-KcQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.13642284269999999" green="0.15563029049999999" blue="0.217861414" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rOQ-Mu-tzv">
                                 <rect key="frame" x="8" y="52" width="398" height="30"/>
