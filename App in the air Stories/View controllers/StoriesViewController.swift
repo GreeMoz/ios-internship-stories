@@ -8,12 +8,18 @@
 
 import UIKit
 
+enum WindowType {
+    case textUp
+    case textDown
+}
+
 struct StoryWindow {
     var image: UIImage?
     var title: String?
     var text: String?
     var textColor: UIColor = .white
     var backgroundColor: UIColor = .clear
+    var type: WindowType = .textDown
 }
 
 class StoriesViewController: UIViewController {
@@ -71,16 +77,27 @@ class StoriesViewController: UIViewController {
     }
     
     private func generateControllerFor(storyWindow: StoryWindow) -> UIViewController? {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentTextDownViewController.self)) as? ContentTextDownViewController {
-            vc.displayImage = storyWindow.image
-            vc.displayTitle = storyWindow.title
-            vc.displayText = storyWindow.text
-            vc.textColor = storyWindow.textColor
-            vc.backgroundColor = storyWindow.backgroundColor
-            return vc
-        } else {
-            return nil
+        switch storyWindow.type {
+        case .textDown:
+            if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentTextDownViewController.self)) as? ContentTextDownViewController {
+                vc.displayImage = storyWindow.image
+                vc.displayTitle = storyWindow.title
+                vc.displayText = storyWindow.text
+                vc.textColor = storyWindow.textColor
+                vc.backgroundColor = storyWindow.backgroundColor
+                return vc
+            }
+        case .textUp:
+            if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentTextUpViewController.self)) as? ContentTextUpViewController {
+                vc.displayImage = storyWindow.image
+                vc.displayTitle = storyWindow.title
+                vc.displayText = storyWindow.text
+                vc.textColor = storyWindow.textColor
+                return vc
+            }
         }
+        
+        return nil
     }
     
     func viewControllerFor(index: Int) -> UIViewController? {
