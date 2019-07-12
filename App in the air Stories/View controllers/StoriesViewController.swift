@@ -100,13 +100,19 @@ class StoriesViewController: UIViewController {
         return nil
     }
     
+    // TODO: refactor
     func viewControllerFor(index: Int) -> UIViewController? {
         guard index >= 0 && index < windows.count else { return nil }
         
-        let vc = generateControllerFor(storyWindow: windows[index])
-        (vc as? ContentTextDownViewController)?.index = index
+        if var vc = generateControllerFor(storyWindow: windows[index]) as? ContentViewControllerProtocol {
+            vc.index = index
+            
+            if let vc = vc as? UIViewController {
+                return vc
+            }
+        }
         
-        return vc
+        return nil
     }
     
     func setupGestures() {
@@ -186,14 +192,14 @@ class StoriesViewController: UIViewController {
 
 extension StoriesViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if let viewController = viewController as? ContentTextDownViewController, let index = viewController.index {
+        if let viewController = viewController as? ContentViewControllerProtocol, let index = viewController.index {
             return viewControllerFor(index: index - 1)
         }
         return nil
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if let viewController = viewController as? ContentTextDownViewController, let index = viewController.index {
+        if let viewController = viewController as? ContentViewControllerProtocol, let index = viewController.index {
             return viewControllerFor(index: index + 1)
         }
         return nil
@@ -203,14 +209,14 @@ extension StoriesViewController: UIPageViewControllerDataSource {
 
 extension StoriesViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        if let newIndex = (pendingViewControllers.first as? ContentTextDownViewController)?.index {
+        if let newIndex = (pendingViewControllers.first as? ContentViewControllerProtocol)?.index {
             currentIndex = newIndex
         }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if !completed {
-            if let newIndex = (previousViewControllers.first as? ContentTextDownViewController)?.index {
+            if let newIndex = (previousViewControllers.first as? ContentViewControllerProtocol)?.index {
                 currentIndex = newIndex
             }
         }

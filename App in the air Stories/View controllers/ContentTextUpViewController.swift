@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContentTextUpViewController: UIViewController {
+class ContentTextUpViewController: UIViewController, ContentViewControllerProtocol {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
