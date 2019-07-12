@@ -23,18 +23,19 @@ struct StoryWindow {
 }
 
 class StoriesViewController: UIViewController {
+    
     var windows: [StoryWindow] = []
+    var interactor: Interactor?
+    var pageViewController: UIPageViewController?
     var currentIndex = 0 {
         didSet {
             pageControl.currentIndex = currentIndex + 1
         }
     }
-    var interactor: Interactor?
     
-    var pageViewController: UIPageViewController?
     @IBOutlet weak var pageControl: PageControlView!
-    
     @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -77,6 +78,7 @@ class StoriesViewController: UIViewController {
     }
     
     private func generateControllerFor(storyWindow: StoryWindow) -> UIViewController? {
+        
         switch storyWindow.type {
         case .textDown:
             if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ContentTextDownViewController.self)) as? ContentTextDownViewController {
@@ -100,7 +102,6 @@ class StoriesViewController: UIViewController {
         return nil
     }
     
-    // TODO: refactor
     func viewControllerFor(index: Int) -> UIViewController? {
         guard index >= 0 && index < windows.count else { return nil }
         

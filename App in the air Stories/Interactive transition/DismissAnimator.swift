@@ -18,14 +18,10 @@ extension DismissAnimator : UIViewControllerAnimatedTransitioning {
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let from = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from),
-            let to = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
-        else {
-            return
-        }
+            let to = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) else { return }
         
         transitionContext.containerView.insertSubview(to.view, belowSubview: from.view)
-        
-        UIView.animate(withDuration: 0.6, animations: {
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             from.view.frame = CGRect(origin: CGPoint(x: 0, y: UIScreen.main.bounds.height), size: UIScreen.main.bounds.size)            
         }) { _ in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

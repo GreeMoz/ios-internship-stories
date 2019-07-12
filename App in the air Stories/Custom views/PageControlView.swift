@@ -47,10 +47,7 @@ class PageControlView: UIView {
         backgroundColor = .clear
     }
     
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
-        // Drawing code
         guard let ctx = UIGraphicsGetCurrentContext() else { return }
         
         ctx.setLineCap(.round)

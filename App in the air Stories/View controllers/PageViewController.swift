@@ -13,22 +13,22 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for subview in view.subviews {
-            if let scrollView = subview as? UIScrollView {
-                scrollView.delegate = self
-            }
-        }
+//        for subview in view.subviews {
+//            if let scrollView = subview as? UIScrollView {
+//                scrollView.delegate = self
+//            }
+//        }
     }
     
 }
 
 
-extension UIPageViewController: UIScrollViewDelegate {
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let point = scrollView.contentOffset
-        var percentComplete: CGFloat
-        percentComplete = abs(point.x - view.frame.size.width) / view.frame.size.width
-        print("percentComplete: \(percentComplete)")
-    }
-}
+//extension UIPageViewController: UIScrollViewDelegate {
+//
+//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let point = scrollView.contentOffset
+//        var percentComplete: CGFloat
+//        percentComplete = abs(point.x - view.frame.size.width) / view.frame.size.width
+//        print("percentComplete: \(percentComplete)")
+//    }
+//}
