@@ -21,11 +21,12 @@ class ViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: StoriesViewController.self)) as? StoriesViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.windows = [
-                StoryWindow(image: UIImage(named: "one"), title: "Terminal and gate changes", text: "and much more", type: .textUp),
-                StoryWindow(image: UIImage(named: "two"), title: "Detailed profile", type: .textUp),
-                StoryWindow(image: UIImage(named: "three"), title: "Notifications", type:.textUp),
-                StoryWindow(image: UIImage(named: "four"), title: "AR map of your flights", text: "Visualize your flights in 3D"),
-                StoryWindow(image: UIImage(named: "five"), title: "Statistics", text: "By years and months", backgroundColor: .black)
+                // в новых версиях xcode можно опускать поля и тогда они будут заманены значениями по умолчанию, здесь надо прописывать всё
+                StoryWindow(image: UIImage(named: "one"), title: "Terminal and gate changes", text: "and much more", textColor: .white, backgroundColor: .clear, type: .textUp),
+                StoryWindow(image: UIImage(named: "two"), title: "Detailed profile", text: "", textColor: .white, backgroundColor: .clear, type: .textUp),
+                StoryWindow(image: UIImage(named: "three"), title: "Notifications", text: "", textColor: .white, backgroundColor: .clear, type:.textUp),
+                StoryWindow(image: UIImage(named: "four"), title: "AR map of your flights", text: "Visualize your flights in 3D", textColor: .white, backgroundColor: .clear, type:.textDown),
+                StoryWindow(image: UIImage(named: "five"), title: "Statistics", text: "By years and months", textColor: .white, backgroundColor: .black, type: .textDown)
             ]
             
             vc.transitioningDelegate = self
