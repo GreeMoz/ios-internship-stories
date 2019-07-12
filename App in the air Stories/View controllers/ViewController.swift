@@ -21,10 +21,11 @@ class ViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: StoriesViewController.self)) as? StoriesViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.windows = [
-                StoryWindow(image: UIImage(named: "four"), title: "Test title", text: "Lorem ipsum dolor sit amet", textColor: .red),
-                StoryWindow(image: UIImage(named: "one"), title: "Test", text: "Lorem ipsum dolor sit amet", type: .textUp),
-                StoryWindow(image: UIImage(named: "three"), title: "Test title", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", textColor: .black, backgroundColor: .white),
-                StoryWindow(image: UIImage(named: "two"))
+                StoryWindow(image: UIImage(named: "one"), title: "Terminal and gate changes", text: "and much more", type: .textUp),
+                StoryWindow(image: UIImage(named: "two"), title: "Detailed profile", type: .textUp),
+                StoryWindow(image: UIImage(named: "three"), title: "Notifications", type:.textUp),
+                StoryWindow(image: UIImage(named: "four"), title: "AR map of your flights", text: "Visualize your flights in 3D"),
+                StoryWindow(image: UIImage(named: "five"), title: "Statistics", text: "By years and months", backgroundColor: .black)
             ]
             
             vc.transitioningDelegate = self
